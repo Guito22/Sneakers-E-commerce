@@ -1,0 +1,17 @@
+@import url(../cssVars.css);
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root,#bodyLayoutDiv{
+  background-color: var(--body-bg);
+  color: var(--body-font-color);
+  min-height: 60vh;
+  transition: 0.3s all ease-in;
+}
+
+#banner{
+  height: 60vw;
+}

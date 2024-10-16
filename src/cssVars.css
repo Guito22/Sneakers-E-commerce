@@ -1,0 +1,27 @@
+:root{
+    --body-bg:lightskyblue;
+    --card-bg:#fff;
+    --img-filter:none;
+    --body-font-color:black;
+    --nav-bg:#e0e0e0;
+    --heart-color:red;
+    --placeholder-search-color:darkgray;
+    --form-color:rgb(145, 145, 145);
+    --number-span-bg:lightskyblue;
+    --footer-bg:#f0f0f0;
+    --theme-btn-bg:orangered;
+}
+
+[data-theme="dark"]{
+    --body-bg:#202945;
+    --card-bg:#152028;
+    --img-filter:brightness(.8) contrast(1.2);
+    --body-font-color:#eee;
+    --nav-bg:#121212;
+    --heart-color:#db6a6c;
+    --placeholder-search-color:silver;
+    --form-color:silver;
+    --number-span-bg:darkslateblue;
+    --footer-bg:var(--body-bg);
+    --theme-btn-bg:navy;
+}

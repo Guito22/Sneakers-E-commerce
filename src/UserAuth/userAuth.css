@@ -1,0 +1,163 @@
+@import url(../cssVars.css);
+
+#authDiv{
+    display: flex;
+    width: 100%;
+
+    & img{
+        width: 50vw;
+        filter: var(--img-filter);
+    }
+}
+
+#formDiv{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.Login{
+    background-color: rgb(4, 56, 73);
+}
+
+.Signup{
+    background-color: rgb(18, 47, 18);
+}
+
+#formDiv form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--card-bg);
+    color:var(--body-font-color);
+    padding: 2rem;
+    border-radius: 1rem;
+    width: 55%;
+    transition: 0.3s all ease-in;
+
+    & h1{
+        font-weight: bold;
+    }
+
+    & label{
+        width: 75%;
+        font-weight:500;
+        margin: 1rem;
+    }
+    & .btn-primary{
+        background-color: #1b1894;
+    }
+
+    & input{
+        margin: 1rem;
+        margin-left: 0;
+        width: 100%;
+        height: 2.5rem;
+        border: none;
+        border-bottom: 1px solid lightgray;
+        padding-left: 2rem;
+        transition: 0.5s all ease-in-out;
+        background-color: var(--card-bg);
+        color: var(--body-font-color);
+
+        &:hover,&:focus,&:active{
+        
+            border: none;
+            border-bottom: 1px solid black;
+            border-radius: 0;
+            outline: none;
+            transition: 0.5s all ease-in-out;
+            & + .startIcon{
+                color: black;
+                transition: 0.5s all ease-in-out;
+    
+            }
+        };
+        
+        &::placeholder{
+            color:var(--form-color)
+        }
+        &:-webkit-autofill{
+            &,&:hover,&:active,&:focus{
+                -webkit-box-shadow: 0 0 0 40px var(--card-bg) inset !important;
+                transition: none !important;
+                -webkit-text-fill-color: var(--body-font-color) !important;
+                
+            }       
+        }
+        
+    }
+}   
+
+.startIcon{
+    position: absolute;
+    height: 1.5rem;
+    width: 1.5rem;
+    color: darkgray;
+}
+
+.formInputDiv{
+    width: 75%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#endIconBtn{
+    position: absolute;
+    right: -1.5rem;
+}
+
+#endIcon{
+    transition: 0.3s all ease-in;
+    color: darkgray;
+    &:hover{
+        color: slategray;
+        transition: 0.3s all ease-in;
+    }
+}
+
+#submitBtn{
+    margin: 2rem;
+    width: 80%;
+    height: 2.5rem;
+    border: none;
+    font-weight: bold;
+    border-radius: 1rem;
+    transition: 0.5s all ease-in-out;
+}
+
+#inputAlert{
+    height: 4rem;
+}
+
+#alert{
+    padding: 0 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+/* Responsive adjustments */
+
+@media screen and (max-width:1000px){
+    #authDiv img{
+        display: none;
+    }
+    #formDiv{
+        width: 100vw;
+    }
+    #formDiv form{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:600px){
+
+    #formDiv form{
+        width: 80%;
+    }
+}

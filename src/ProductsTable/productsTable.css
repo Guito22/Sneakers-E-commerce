@@ -1,0 +1,67 @@
+@import url(../cssVars.css);
+
+#tableContainer{
+    margin:2rem auto;
+    width:95%;
+    max-height:100vh;
+    background-color: var(--card-bg);
+    transition: 0.3s all ease-in;
+}
+
+#table{
+    min-width:100%;
+    color:white
+}
+
+#imgTable{
+    width:10vw;
+    height:10vw;
+    filter: var(--img-filter);
+    border-radius: 8px;
+}
+
+#nameTable:link{
+    text-decoration: none;
+}
+
+#deleteBtn{
+    color:var(--heart-color)
+}
+
+#modalBox{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    background-color: var(--card-bg);
+    color: var(--body-font-color);
+    box-shadow: 24px 24px 48px rgba(0, 0, 0, 0.5);
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+
+#btnPaymentForm{
+    width: 100%;
+}
+
+#closeModal{
+    position: absolute;
+    top: 1.5rem;
+    right: 0;
+}
+
+th{
+    background-color: midnightblue !important;
+    color: white !important;
+    font-weight: bold !important;
+}
+
+.cellText{
+    color: var(--body-font-color) !important;
+}
+
+#paymentBox{
+    background-color: var(--card-bg) !important;
+    color: var(--body-font-color) !important;
+}
