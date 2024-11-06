@@ -1,9 +1,12 @@
 const mongoose = require('mongoose');
 
+const uri = "mongodb+srv://elguito2003:8xJQaxClIccmx3Ji@sneakerlounge.sx8tn.mongodb.net/?retryWrites=true&w=majority&appName=SneakerLounge";
+
+
 main().catch(err => console.log(err));
 
 async function main() {
-    await mongoose.connect('mongodb://127.0.0.1:27017/SneakerLounge');
+    await mongoose.connect(uri)
     console.log("MONGOOSE CONNECTION OPEN");
 }
 
