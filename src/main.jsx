@@ -20,7 +20,7 @@ import FootballList from './SneakerList/FootballList.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   
-    <BrowserRouter>
+    <BrowserRouter basename='/Sneakers-E-commerce'>
 
       <Routes>
 
