@@ -1,4 +1,4 @@
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 
 const isLogged = (req,res,next)=>{
     const {userId} = req.params
