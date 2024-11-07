@@ -15,7 +15,7 @@ export default function PaymentModal() {
   const handleClose = () => setOpen(false);
 
   const payCart = async ()=>{
-    const res = await axios.delete(`http://localhost:3000/account/${user._id}/cart/pay`,{withCredentials:true})
+    const res = await axios.delete(`https://sneakers-e-commerce.onrender.com/account/${user._id}/cart/pay`,{withCredentials:true})
     loadData()
     handleClose()
     navigate(`/${user._id}/cart`)

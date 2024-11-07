@@ -20,8 +20,8 @@ export default function Layout() {
   }
 
   const getUser = async ()=>{
-    const userFound = await axios.get("http://localhost:3000/account/user",{withCredentials:true})
-    const sneakerList = await axios.get("http://localhost:3000/sneakers",{withCredentials:true})
+    const userFound = await axios.get("https://sneakers-e-commerce.onrender.com/account/user",{withCredentials:true})
+    const sneakerList = await axios.get("https://sneakers-e-commerce.onrender.com/sneakers",{withCredentials:true})
     const root = document.querySelector("#root")
     const circle = document.querySelector("#circle")
     if(userFound.data){

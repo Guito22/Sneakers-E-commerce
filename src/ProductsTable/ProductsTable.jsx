@@ -20,10 +20,10 @@ export default function ProductsTable({tableType,sneakers}){
     const handleDelete =async (sneaker)=>{
         if(user){
             if(tableType=="cart"){
-                const res = await axios.delete(`http://localhost:3000/account/${user._id}/${sneaker._id}/cart/delete`,{withCredentials:true})
+                const res = await axios.delete(`https://sneakers-e-commerce.onrender.com/account/${user._id}/${sneaker._id}/cart/delete`,{withCredentials:true})
             }
             else{
-                const res = await axios.post(`http://localhost:3000/account/${user._id}/${sneaker._id}/favorite`,{},{withCredentials:true})
+                const res = await axios.post(`https://sneakers-e-commerce.onrender.com/account/${user._id}/${sneaker._id}/favorite`,{},{withCredentials:true})
             }
             loadData()
             setSnackBar({

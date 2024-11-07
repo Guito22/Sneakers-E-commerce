@@ -33,7 +33,7 @@ export default function DetailedView(){
 
     const addToFav = async ()=>{
       if(user){
-        const res = await axios.post(`http://localhost:3000/account/${user._id}/${product._id}/favorite`,{},{withCredentials:true})
+        const res = await axios.post(`https://sneakers-e-commerce.onrender.com/account/${user._id}/${product._id}/favorite`,{},{withCredentials:true})
           loadData()
           setSnackBar({
             text:` ${res.data} ${res.data==="Added" ? "to" : "from"} favorites`,

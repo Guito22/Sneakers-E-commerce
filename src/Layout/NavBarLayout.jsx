@@ -19,7 +19,7 @@ export default function NavBarLayout(){
       const handleLogAction = ()=>{
         if(user!=undefined && user!=false){
     
-          axios.post(`http://localhost:3000/account/${user._id}/logout`,{},{withCredentials:true}).
+          axios.post(`https://sneakers-e-commerce.onrender.com/account/${user._id}/logout`,{},{withCredentials:true}).
           then((res)=>{
             
             loadData()
@@ -35,7 +35,7 @@ export default function NavBarLayout(){
       const app = document.querySelector("#root")
       const circle = document.querySelector("#circle")
       if(user){
-        const res = await axios.patch(`http://localhost:3000/account/${user._id}/changeTheme`,{},{withCredentials:true})
+        const res = await axios.patch(`https://sneakers-e-commerce.onrender.com/account/${user._id}/changeTheme`,{},{withCredentials:true})
         circle.classList.toggle("darkMode")
         setThemeIcon(res.data==="light" ? <LightMode/> : <DarkMode/>)
         loadData()

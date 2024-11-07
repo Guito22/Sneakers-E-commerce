@@ -35,7 +35,7 @@ export default function Login() {
                 })
             }
             else{
-                axios.post("http://localhost:3000/account/login",form,{withCredentials:true}).
+                axios.post("https://sneakers-e-commerce.onrender.com/account/login",form,{withCredentials:true}).
                 then((res)=>{
                     if(res.data==="Error"){
                         setAlert({

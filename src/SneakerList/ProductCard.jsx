@@ -23,7 +23,7 @@ export default function ProductCard({ product }) {
 
   const addToCart = async ()=> {
     if(user){
-      const res = await axios.patch(`http://localhost:3000/account/${user._id}/${product._id}/cart/add`,{quantity:1},{withCredentials:true})
+      const res = await axios.patch(`https://sneakers-e-commerce.onrender.com/account/${user._id}/${product._id}/cart/add`,{quantity:1},{withCredentials:true})
         if(res.data==="added"){
 
           loadData()
@@ -49,7 +49,7 @@ export default function ProductCard({ product }) {
   
   const addToFav = async ()=>{
     if(user){
-      const res = await axios.post(`http://localhost:3000/account/${user._id}/${product._id}/favorite`,{},{withCredentials:true})
+      const res = await axios.post(`https://sneakers-e-commerce.onrender.com/account/${user._id}/${product._id}/favorite`,{},{withCredentials:true})
         loadData()
         setSnackBar({
           text:` ${res.data} ${res.data==="Added" ? "to" : "from"} favorites`,

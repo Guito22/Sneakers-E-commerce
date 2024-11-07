@@ -62,7 +62,7 @@ export default function signUp() {
             return           
         }
         if(form.name && form.email && form.password && isEmailValid){
-            axios.post("http://localhost:3000/account/signup",{...form,theme},{withCredentials:true}).
+            axios.post("https://sneakers-e-commerce.onrender.com/account/signup",{...form,theme},{withCredentials:true}).
             then((res)=>{
                 if(!res.data){
                     setAlert({

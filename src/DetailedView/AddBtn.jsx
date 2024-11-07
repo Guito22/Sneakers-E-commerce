@@ -22,7 +22,7 @@ export default function AddBtn({stock,product}) {
   const addToCart = async () => {
     if(user){
       if(quantity>0){
-        const res = await axios.patch(`http://localhost:3000/account/${user._id}/${product._id}/cart/add`,{quantity},{withCredentials:true})
+        const res = await axios.patch(`https://sneakers-e-commerce.onrender.com/account/${user._id}/${product._id}/cart/add`,{quantity},{withCredentials:true})
         if(res.data==="added"){
 
           loadData()
